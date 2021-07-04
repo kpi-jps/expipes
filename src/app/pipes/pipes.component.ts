@@ -10,8 +10,7 @@ export class PipesComponent implements OnInit {
   placa : string = '';
   telBr : string = '';
   telUs : string = '';
-  nomeABNT : string;
-  nomesABNT : string [];
+  nomeABNT : string = '';
   constructor() { }
 
   ngOnInit(): void {
