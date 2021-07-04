@@ -1,0 +1,33 @@
+
+<div>
+    <h3>Placa de automóvel</h3>
+    <label>input:
+    <input [(ngModel)]="placa" placeholder="ABC0000"> 
+    | output: <b>{{placa | placaAuto}}</b>
+    </label>
+</div>
+
+<div>
+    <h3>Telefone BR</h3>
+    <label>input:
+    <input [(ngModel)]="telBr" type="text" placeholder="+99 (99) 9 9999-9999"> 
+    | output: <b>{{telBr | telBR}}</b>
+    </label>
+</div>
+
+<div>
+    <h3>Telefone US</h3>
+    <label> input:
+    <input [(ngModel)]="telUs" type="text" placeholder="+99 (99) 9 9999-9999">
+    | output: <b>{{telUs | telUS}}</b>
+    </label>
+</div>
+
+<div>
+    <h3>Nome ABNT</h3>
+    <label>input:
+    <input [(ngModel)]="nomeABNT" type="text" placeholder="Nome ABNT">
+    | output: {{nomeABNT | nomeABNT}}
+    </label>
+</div>
+
