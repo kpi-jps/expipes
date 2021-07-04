@@ -91,7 +91,7 @@ export class NomeABNTPipe implements PipeTransform {
               if(i == 0) {
                 output += this.convertToABNT(nomes[i]);
               } else {
-                output += ', ' + this.convertToABNT(nomes[i]);
+                output += '; ' + this.convertToABNT(nomes[i]);
               }
             }
           }
