@@ -12,7 +12,7 @@ export class NomeABNTPipe implements PipeTransform {
   
   //checa se caracter de uma string é válido, ou seja, apenas letras e os seguintes caracteres
   // ",", " "(espaço),"ã", á, "é", "ê", "í", "ó", "ô", "ú", 
-  checkIfValidChar(str : string, strIndex : number) : boolean {
+  private checkIfValidChar(str : string, strIndex : number) : boolean {
     if (str.charCodeAt(strIndex) >= 65 && str.charCodeAt(strIndex) <= 90) {
       return true;
     } else if (str.charCodeAt(strIndex) >= 97 && str.charCodeAt(strIndex) <= 122) {
@@ -43,7 +43,7 @@ export class NomeABNTPipe implements PipeTransform {
   }
 
   //Checa se uma "string" é válida de acordo comas regras da função "checkIfValidChar"
-  checkIfStrIsValid(str : string) : boolean {
+  private checkIfStrIsValid(str : string) : boolean {
     for (let i = 0; str.length; i++) {
       if(!this.checkIfValidChar(str, i)) {
         return false
@@ -52,7 +52,7 @@ export class NomeABNTPipe implements PipeTransform {
   }
 
   //Converte uma string para o padrão de nomes ABNT
-  convertToABNT(input : string) : string {
+  private convertToABNT(input : string) : string {
     let output : string = '';
     let nome : string[] = input.split(' ');
     output += nome[nome.length-1].toUpperCase() + ', ' + nome[0] + ' ';

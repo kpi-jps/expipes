@@ -7,7 +7,7 @@ export class TelBRPipe implements PipeTransform {
   
   //códigos tabela ascii 0 -> 9 =  48 -> 57
   //checa se caracter de uma string é um número
-  checkIfNumber(str : string, strIndex : number) : boolean {
+  private checkIfNumber(str : string, strIndex : number) : boolean {
     if (str.charCodeAt(strIndex) >= 48 && str.charCodeAt(strIndex) <= 57) {
       return true;
     } else {

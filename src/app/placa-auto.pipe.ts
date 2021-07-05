@@ -8,7 +8,7 @@ export class PlacaAutoPipe implements PipeTransform {
   //códigos tabela ascii A -> Z =  97 -> 122
   //códigos tabela ascii 0 -> 9 =  48 -> 57
   //checa se caracter de uma string é um número
-  checkIfNumber(str : string, strIndex : number) : boolean {
+  private checkIfNumber(str : string, strIndex : number) : boolean {
     if (str.charCodeAt(strIndex) >= 48 && str.charCodeAt(strIndex) <= 57) {
       return true;
     } else {
@@ -16,7 +16,7 @@ export class PlacaAutoPipe implements PipeTransform {
     }
   }
   //checa se caracter de uma string é uma letra
-  checkIfLetter(str : string, strIndex : number) : boolean {
+  private checkIfLetter(str : string, strIndex : number) : boolean {
     if ((str.charCodeAt(strIndex) >= 65 && str.charCodeAt(strIndex) <= 90) || (str.charCodeAt(strIndex) >= 97 && str.charCodeAt(strIndex) <= 122) ) {
       return true;
     } else {
