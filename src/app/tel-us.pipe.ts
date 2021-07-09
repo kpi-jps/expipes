@@ -51,7 +51,7 @@ export class TelUSPipe implements PipeTransform {
     return output;
   }
   transform(tel: string): string  {
-    if (tel.length > 13 || tel.length < 10 || tel == '') {
+    if (tel.length > 13 || tel.length < 9 || tel == '') {
       return 'Inválido';
     } else {
       for (let i = 0; i < tel.length; i++){ 
@@ -61,6 +61,8 @@ export class TelUSPipe implements PipeTransform {
       } 
       tel = this.letterToNumber(tel);
       switch(tel.length) {
+        case 9:
+          return '(' + tel.slice(0, 1) + ') ' + tel.slice(1, 5) + '-' + tel.slice(5, 9);
         case 10:
           return '(' + tel.slice(0, 2) + ') ' + tel.slice(2, 6) + '-' + tel.slice(6, 10);
         case 11: 
